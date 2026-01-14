@@ -1,0 +1,47 @@
+
+---
+
+# 📄 `NOTES.txt`
+
+```txt
+Design Notes – Intent Classification Project
+
+1. Model Choice
+----------------
+Logistic Regression was selected because it is fast, interpretable,
+and well-suited for short-text classification problems. The assignment
+explicitly allowed choosing one classical ML approach.
+
+2. Dataset Limitations
+---------------------
+The dataset is intentionally small, which leads to moderate accuracy
+(~0.65–0.8). This is expected behavior. With limited data, the model
+prioritizes generalization over overfitting.
+
+3. Confidence Interpretation
+----------------------------
+Confidence indicates how sure the model is about the predicted class,
+not whether the intent is high or low. A high confidence with a "low"
+label means the model is very certain the text is non-commercial.
+
+4. Text Cleaning
+----------------
+User input is preserved for transparency, while a cleaned version
+(lowercase, punctuation-free) is used internally for prediction.
+
+5. Storage Decision
+-------------------
+Predictions are stored in a JSON file for simplicity and transparency.
+In a production system, this would be replaced by a database.
+
+6. Why Not LSTM?
+----------------
+Deep learning models like LSTM require larger datasets and longer
+training time. For this task, classical ML provides better
+interpretability and faster iteration.
+
+7. Overall Goal
+---------------
+The goal of this project is not to maximize raw accuracy, but to
+demonstrate a correct, explainable, and complete ML pipeline that can
+be extended in the future.
